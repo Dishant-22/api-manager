@@ -47,6 +47,22 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  msix: ^3.16.8
 
 flutter:
   uses-material-design: true
+
+# ─── Windows MSIX Installer Configuration ────────────────────────────────────
+msix_config:
+  display_name: API Managers
+  publisher_display_name: Dishant
+  identity_name: com.dishant.apimanagers
+  msix_version: 1.0.0.0
+  description: Professional API testing tool — build, test and manage HTTP requests
+  logo_path: windows\runner\resources\app_icon.ico
+  capabilities: internetClient, privateNetworkClientServer
+  output_name: APIManagers-Setup
+  output_path: installer
+  publisher: CN=dishant-chudasama.com
+  store: false
+  sign_msix: false
